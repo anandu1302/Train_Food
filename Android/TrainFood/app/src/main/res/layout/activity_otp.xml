@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".OtpActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/otp"/>
+
+    <!-- text -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:text="Verification Code"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/sf_pro_text_bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="Please type the verification code"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/sf_pro_text_regular"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="3dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="sent to"
+            android:includeFontPadding="false"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:fontFamily="@font/sf_pro_text_regular"/>
+
+        <TextView
+            android:id="@+id/phoneNumberTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="+994 555 66 77"
+            android:includeFontPadding="false"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/sf_pro_text_bold"/>
+    </LinearLayout>
+
+
+    <!--OTP layout is here-->
+
+    <LinearLayout
+        android:id="@+id/pin_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/pin_first_edittext"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:maxLength="1"
+            android:minEms="2"
+            android:textStyle="bold"
+            android:nextFocusDown="@+id/pin_second_edittext"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:background="@drawable/rect_box"
+            android:contentDescription="PIN input field"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/pin_second_edittext"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:maxLength="1"
+            android:textStyle="bold"
+            android:minEms="2"
+            android:nextFocusDown="@+id/pin_third_edittext"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/rect_box"
+            android:contentDescription="PIN input field"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/pin_third_edittext"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:maxLength="1"
+            android:minEms="2"
+            android:nextFocusDown="@+id/pin_four_edittext"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/rect_box"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/pin_four_edittext"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:maxLength="1"
+            android:minEms="2"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:background="@drawable/rect_box"
+            android:inputType="number" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/verifyButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Verify otp"
+        android:background="@drawable/rect_button"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:padding="10dp"/>
+
+</LinearLayout>
